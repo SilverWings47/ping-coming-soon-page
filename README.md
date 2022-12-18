@@ -29,7 +29,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [Github repo](https://github.com/SilverWings47/ping-coming-soon-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live site URL](https://app.netlify.com/sites/gleeful-valkyrie-5913b3/overview)
 
 ### Built with
 
