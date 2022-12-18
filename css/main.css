@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  min-height: 100vh;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-primary-blue: hsl(223, 87%, 63%);
+  --clr-secondary-blue: hsl(223, 100%, 88%);
+  --clr-secondary-red: hsl(354, 100%, 66%);
+  --clr-neutral-gray: hsl(0, 0%, 59%);
+  --clr-neutral-blue: hsl(209, 33%, 12%);
+  --font-size-primary: 20px;
+  --ff-primary: "Libre Franklin", sans-serif;
+  --fw-bold-700: 700;
+  --fw-bold-600: 600;
+  --fw-regular-300: 300;
+}
+
+body {
+  font-family: var(--ff-primary);
+}
+
+.container {
+  padding: 5rem 1rem 5.8rem 1rem;
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 50rem;
+    margin-inline: auto;
+    padding-top: 4rem;
+  }
+}
+
+header > img {
+  margin-inline: auto;
+  width: 15%;
+}
+@media (min-width: 992px) {
+  header > img {
+    width: 10%;
+  }
+}
+
+.primary {
+  margin-block: 2.3rem 1.8rem;
+  text-align: center;
+}
+.primary .primary__title {
+  font-weight: var(--fw-regular-300);
+  color: var(--clr-neutral-gray);
+  font-size: 1.3rem;
+}
+@media (min-width: 992px) {
+  .primary .primary__title {
+    font-size: 2.5rem;
+  }
+}
+.primary .primary__title span {
+  font-weight: var(--fw-bold-700);
+  color: #000;
+}
+.primary .primary__text {
+  margin-top: 1rem;
+  color: #000;
+  font-weight: var(--fw-regular-300);
+  font-size: 0.8rem;
+}
+@media (min-width: 992px) {
+  .primary .primary__text {
+    font-size: 1rem;
+  }
+}
+
+.form-container {
+  display: grid;
+  max-width: 83%;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+@media (min-width: 992px) {
+  .form-container {
+    grid-template-columns: 1fr 0.45fr;
+    gap: 0.5rem 0.875rem;
+    max-width: 70%;
+  }
+}
+.form-container input {
+  display: inline-block;
+  border-radius: 25px;
+  border: 1px solid rgba(79, 125, 243, 0.4);
+  padding: 0.6rem 2rem;
+  font-size: 0.8rem;
+  min-height: 38px;
+}
+@media (min-width: 992px) {
+  .form-container input {
+    min-height: auto;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+.form-container input:focus {
+  outline: none;
+}
+.form-container input.invalid {
+  border: 1px solid var(--clr-secondary-red);
+  color: var(--clr-secondary-red);
+}
+.form-container input.empty {
+  border: 1px solid var(--clr-secondary-red);
+}
+.form-container input.invalid + #error-msg {
+  display: inline-block;
+}
+.form-container input.empty + #error-msg {
+  display: inline-block;
+}
+.form-container input::-moz-placeholder {
+  color: rgba(79, 125, 243, 0.6);
+}
+.form-container input:-ms-input-placeholder {
+  color: rgba(79, 125, 243, 0.6);
+}
+.form-container input::placeholder {
+  color: rgba(79, 125, 243, 0.6);
+}
+.form-container #error-msg {
+  display: none;
+  color: var(--clr-secondary-red);
+  font-size: 0.6rem;
+  text-align: center;
+  font-style: italic;
+  margin-block: 0.3rem 0.65rem;
+}
+@media (min-width: 992px) {
+  .form-container #error-msg {
+    justify-self: start;
+    margin: 0 0 0 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+.form-container .notify-me-btn {
+  margin-top: 0.6rem;
+  border: 0;
+  border-radius: 25px;
+  padding-block: 0.6rem;
+  background-color: var(--clr-primary-blue);
+  color: white;
+  box-shadow: 0px 5px 14px 0px rgba(79, 125, 243, 0.3);
+  font-size: 0.8rem;
+  min-height: 38px;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .form-container .notify-me-btn {
+    margin: 0;
+    min-height: auto;
+    font-size: 0.9rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-inline: 3rem;
+  }
+}
+.form-container .notify-me-btn:hover {
+  background-color: #7ea0f6;
+}
+
+figure {
+  max-width: 95%;
+  margin-inline: auto;
+}
+@media (min-width: 992px) {
+  figure {
+    max-width: 70%;
+  }
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .socials > * + * {
+  margin-left: 5px;
+}
+footer .socials .fa-brands {
+  color: var(--clr-primary-blue);
+  border: 1px solid rgba(79, 125, 243, 0.3);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  font-size: 1rem;
+  padding: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .copyright {
+  font-size: 0.65rem;
+  color: var(--clr-neutral-gray);
+}
+
+.alert-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background-color: var(--clr-primary-blue);
+  color: white;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in;
+}
+.alert-box.active {
+  transform: translateY(0);
+}
+.alert-box .alert__msg {
+  color: white;
+  font-weight: var(--fw-bold-600);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+@media (min-width: 992px) {
+  .alert-box .alert__msg {
+    font-size: 1rem;
+  }
+}
+.alert-box .alert__close-btn {
+  position: absolute;
+  right: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: white;
+}
+@media (min-width: 992px) {
+  .alert-box .alert__close-btn {
+    font-size: 1.5rem;
+  }
+}
