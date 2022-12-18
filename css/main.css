@@ -257,6 +257,7 @@ footer .socials .fa-brands {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 footer .copyright {
   font-size: 0.65rem;
