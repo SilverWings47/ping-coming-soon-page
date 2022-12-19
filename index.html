@@ -10,21 +10,19 @@
   <title>Frontend Mentor | Ping coming soon page</title>
 </head>
 <body>
+  <div class="alert-box">
+    <p class="alert__msg">Form submitted successfully !</p>
+    <div class="alert__close-btn"><i class="fa-sharp fa-solid fa-xmark"></i></div>
+  </div>
+  <header>
+    <img src="images/logo.svg" alt="PING logo">
+    <h1 class="primary__title">We are launching <span>soon!</span></h1>
+    <p class="primary__text">Subscribe and get notified</p>
+  </header>
   <main class="container">
-    <div class="alert-box">
-      <p class="alert__msg">Form submitted successfully !</p>
-      <div class="alert__close-btn"><i class="fa-sharp fa-solid fa-xmark"></i></div>
-    </div>
-    <header>
-      <img src="images/logo.svg" alt="PING logo">
-    </header>
-    <section class="primary">
-      <h1 class="primary__title">We are launching <span>soon!</span></h1>
-      <p class="primary__text">Subscribe and get notified</p>
-    </section>
     <form class="form-container" novalidate>
       <input type="email" placeholder="Your email address...">
-      <label id="error-msg"></label>
+      <span id="error-msg"></span>
       <button class="notify-me-btn">Notify Me</button>
     </form>
     <figure>
@@ -33,9 +31,9 @@
   </main>
   <footer>
     <div class="socials">
-      <i class="fa-brands fa-facebook-f"></i>
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-instagram"></i>
+      <i aria-label="Facebook" class="fa-brands fa-facebook-f"></i>
+      <i aria-label="Twitter" class="fa-brands fa-twitter"></i>
+      <i aria-label="Instagram" class="fa-brands fa-instagram"></i>
     </div>
     <div class="copyright">&copy; Copyright Ping. All rights reserved.</div>
   </footer>
